@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		5D2226CA1C629C2C008032AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2226C91C629C2C008032AA /* AppDelegate.swift */; };
-		5D2226CC1C629C2C008032AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2226CB1C629C2C008032AA /* ViewController.swift */; };
 		5D2226CF1C629C2C008032AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D2226CD1C629C2C008032AA /* Main.storyboard */; };
-		5D2226D11C629C2C008032AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D2226D01C629C2C008032AA /* Assets.xcassets */; };
 		5D2226D41C629C2C008032AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D2226D21C629C2C008032AA /* LaunchScreen.storyboard */; };
+		5D2226E11C629EE4008032AA /* Magra-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D2226DF1C629EE3008032AA /* Magra-Bold.ttf */; };
+		5D2226E21C629EE4008032AA /* Magra-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5D2226E01C629EE4008032AA /* Magra-Regular.ttf */; };
+		5D2226E81C62A643008032AA /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2226E71C62A643008032AA /* FoodTableViewCell.swift */; };
+		5D2226EA1C63EC53008032AA /* Flavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2226E91C63EC53008032AA /* Flavor.swift */; };
+		5D2226EC1C63ED29008032AA /* FlavorTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2226EB1C63ED29008032AA /* FlavorTableVC.swift */; };
+		5D2226EE1C63EF38008032AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D2226ED1C63EF38008032AA /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5D2226C61C629C2C008032AA /* picky.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = picky.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D2226C91C629C2C008032AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5D2226CB1C629C2C008032AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5D2226CE1C629C2C008032AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5D2226D01C629C2C008032AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D2226D31C629C2C008032AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D2226D51C629C2C008032AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D2226DF1C629EE3008032AA /* Magra-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Magra-Bold.ttf"; path = "../Magra-Bold.ttf"; sourceTree = "<group>"; };
+		5D2226E01C629EE4008032AA /* Magra-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Magra-Regular.ttf"; path = "../Magra-Regular.ttf"; sourceTree = "<group>"; };
+		5D2226E71C62A643008032AA /* FoodTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
+		5D2226E91C63EC53008032AA /* Flavor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flavor.swift; sourceTree = "<group>"; };
+		5D2226EB1C63ED29008032AA /* FlavorTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlavorTableVC.swift; sourceTree = "<group>"; };
+		5D2226ED1C63EF38008032AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +63,15 @@
 			isa = PBXGroup;
 			children = (
 				5D2226C91C629C2C008032AA /* AppDelegate.swift */,
-				5D2226CB1C629C2C008032AA /* ViewController.swift */,
+				5D2226E91C63EC53008032AA /* Flavor.swift */,
+				5D2226EB1C63ED29008032AA /* FlavorTableVC.swift */,
+				5D2226E71C62A643008032AA /* FoodTableViewCell.swift */,
 				5D2226CD1C629C2C008032AA /* Main.storyboard */,
-				5D2226D01C629C2C008032AA /* Assets.xcassets */,
 				5D2226D21C629C2C008032AA /* LaunchScreen.storyboard */,
 				5D2226D51C629C2C008032AA /* Info.plist */,
+				5D2226DF1C629EE3008032AA /* Magra-Bold.ttf */,
+				5D2226E01C629EE4008032AA /* Magra-Regular.ttf */,
+				5D2226ED1C63EF38008032AA /* Assets.xcassets */,
 			);
 			path = picky;
 			sourceTree = "<group>";
@@ -122,8 +134,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D2226E21C629EE4008032AA /* Magra-Regular.ttf in Resources */,
+				5D2226E11C629EE4008032AA /* Magra-Bold.ttf in Resources */,
+				5D2226EE1C63EF38008032AA /* Assets.xcassets in Resources */,
 				5D2226D41C629C2C008032AA /* LaunchScreen.storyboard in Resources */,
-				5D2226D11C629C2C008032AA /* Assets.xcassets in Resources */,
 				5D2226CF1C629C2C008032AA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D2226CC1C629C2C008032AA /* ViewController.swift in Sources */,
+				5D2226EA1C63EC53008032AA /* Flavor.swift in Sources */,
+				5D2226EC1C63ED29008032AA /* FlavorTableVC.swift in Sources */,
 				5D2226CA1C629C2C008032AA /* AppDelegate.swift in Sources */,
+				5D2226E81C62A643008032AA /* FoodTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -43,5 +43,13 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string></string>
+	</array>
+	<key>Magra-Bold.ttf</key>
+	<string></string>
+	<key>Magra-Regular.ttf</key>
+	<string></string>
 </dict>
 </plist>
