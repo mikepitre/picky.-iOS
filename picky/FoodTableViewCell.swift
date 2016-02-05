@@ -11,11 +11,14 @@ import UIKit
 class FoodTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cellImage: UIImageView!
+    @IBOutlet weak var foodCellLabel: UILabel!
     
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        foodCellLabel.backgroundColor = UIColor(white: 0.0, alpha: 0.35)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
