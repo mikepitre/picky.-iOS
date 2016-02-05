@@ -18,7 +18,13 @@ class FlavorTableVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         Flavor(name: "Healthy", image: "healthy"),
         Flavor(name: "Pizza", image: "pizza"),
         Flavor(name: "Sushi", image: "sushi"),
-        Flavor(name: "BBQ", image: "bbq")
+        Flavor(name: "BBQ", image: "bbq"),
+        Flavor(name: "Sandwiches", image: "sandwich"),
+        Flavor(name: "Burgers", image: "burgers"),
+        Flavor(name: "Asian", image: "asian"),
+        Flavor(name: "Salad", image: "salad"),
+        Flavor(name: "Seafood", image: "seafood"),
+        Flavor(name: "Dessert", image: "dessert")
     ]
     
     @IBOutlet weak var nextButton: UIBarButtonItem!
@@ -30,7 +36,9 @@ class FlavorTableVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         let nextFont = UIFont(name: "Magra", size: 17.0)
         nextButton.setTitleTextAttributes([NSFontAttributeName: nextFont!], forState: UIControlState.Normal)
         
-        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Magra", size: 22.0)!, NSForegroundColorAttributeName: UIColor(red: 231/255.0, green: 59/255.0, blue: 64/255.0, alpha: 1)]
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "Magra", size: 28.0)!, NSForegroundColorAttributeName: UIColor(red: 231/255.0, green: 59/255.0, blue: 64/255.0, alpha: 1)]
+        
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
         
     }
     

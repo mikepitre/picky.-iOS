@@ -16,6 +16,8 @@
 		5D2226EA1C63EC53008032AA /* Flavor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2226E91C63EC53008032AA /* Flavor.swift */; };
 		5D2226EC1C63ED29008032AA /* FlavorTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D2226EB1C63ED29008032AA /* FlavorTableVC.swift */; };
 		5D2226EE1C63EF38008032AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D2226ED1C63EF38008032AA /* Assets.xcassets */; };
+		8F04A42E1C64581E00A69E3D /* BudgetTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F04A42D1C64581E00A69E3D /* BudgetTableVC.swift */; };
+		8F04A4301C6458AA00A69E3D /* BudgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F04A42F1C6458AA00A69E3D /* BudgetTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		5D2226E91C63EC53008032AA /* Flavor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Flavor.swift; sourceTree = "<group>"; };
 		5D2226EB1C63ED29008032AA /* FlavorTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlavorTableVC.swift; sourceTree = "<group>"; };
 		5D2226ED1C63EF38008032AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F04A42D1C64581E00A69E3D /* BudgetTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetTableVC.swift; sourceTree = "<group>"; };
+		8F04A42F1C6458AA00A69E3D /* BudgetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 				5D2226DF1C629EE3008032AA /* Magra-Bold.ttf */,
 				5D2226E01C629EE4008032AA /* Magra-Regular.ttf */,
 				5D2226ED1C63EF38008032AA /* Assets.xcassets */,
+				8F04A42D1C64581E00A69E3D /* BudgetTableVC.swift */,
+				8F04A42F1C6458AA00A69E3D /* BudgetTableViewCell.swift */,
 			);
 			path = picky;
 			sourceTree = "<group>";
@@ -108,6 +114,7 @@
 				TargetAttributes = {
 					5D2226C51C629C2C008032AA = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = RFXBTPH739;
 					};
 				};
 			};
@@ -151,6 +158,8 @@
 			files = (
 				5D2226EA1C63EC53008032AA /* Flavor.swift in Sources */,
 				5D2226EC1C63ED29008032AA /* FlavorTableVC.swift in Sources */,
+				8F04A4301C6458AA00A69E3D /* BudgetTableViewCell.swift in Sources */,
+				8F04A42E1C64581E00A69E3D /* BudgetTableVC.swift in Sources */,
 				5D2226CA1C629C2C008032AA /* AppDelegate.swift in Sources */,
 				5D2226E81C62A643008032AA /* FoodTableViewCell.swift in Sources */,
 			);
@@ -265,10 +274,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = picky/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.mikepitre.picky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -276,10 +288,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = picky/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.mikepitre.picky;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -302,6 +317,7 @@
 				5D2226DA1C629C2C008032AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

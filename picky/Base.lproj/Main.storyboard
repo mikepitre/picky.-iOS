@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sjT-mo-2bL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="sjT-mo-2bL">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -7,6 +7,8 @@
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Magra-Regular.ttf">
+            <string>Magra</string>
+            <string>Magra</string>
             <string>Magra</string>
             <string>Magra</string>
         </mutableArray>
@@ -32,15 +34,15 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="93"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wbe-WX-JcW" id="MuX-iG-x0o">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="92"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="92.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="ukZ-WA-tk9">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tacos" translatesAutoresizingMaskIntoConstraints="NO" id="ukZ-WA-tk9">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="92"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7OI-58-SdG">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="92"/>
-                                                    <fontDescription key="fontDescription" name="Magra" family="Magra" pointSize="49"/>
+                                                    <fontDescription key="fontDescription" name="Magra" family="Magra" pointSize="36"/>
                                                     <color key="textColor" red="0.97268270570000004" green="1" blue="0.97697381770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -84,7 +86,7 @@
                                     <constraint firstAttribute="height" constant="49" id="5s9-Ts-9aC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Magra" family="Magra" pointSize="18"/>
-                                <color key="textColor" red="0.97268270570000004" green="1" blue="0.97697381770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -98,16 +100,21 @@
                             <constraint firstItem="XCW-nr-EuZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="bC4-ED-6TW"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h5z-Yi-XNx" secondAttribute="bottom" id="dCQ-lh-235"/>
                             <constraint firstItem="h5z-Yi-XNx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="kLE-Zb-ctk"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="h5z-Yi-XNx" secondAttribute="bottom" id="wY0-rs-d7K"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="DAF-6P-KBw"/>
+                                <exclude reference="dCQ-lh-235"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="picky." id="lsX-ZO-P3m">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="iCA-gw-LAZ">
                             <color key="tintColor" red="0.90588235289999997" green="0.23137254900000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <segue destination="dyI-p1-PCS" kind="show" id="Mm9-9m-gpg"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -116,7 +123,85 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1038" y="-275"/>
+            <point key="canvasLocation" x="940" y="-275"/>
+        </scene>
+        <!--Budget TableVC-->
+        <scene sceneID="vFy-Ii-WaJ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jLE-rd-QzK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="dyI-p1-PCS" customClass="BudgetTableVC" customModule="picky" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tEX-KJ-vco"/>
+                        <viewControllerLayoutGuide type="bottom" id="QLa-NN-DOm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IHQ-AE-GBO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your budget?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ett-Gm-8aE">
+                                <rect key="frame" x="0.0" y="64" width="600" height="49"/>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.23137254900000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="uf6-WL-mtr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Magra" family="Magra" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="29" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="HEO-4R-Rv0">
+                                <rect key="frame" x="0.0" y="114" width="600" height="442"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="budgetCell" rowHeight="80" id="3Se-Ru-OMg" customClass="BudgetTableViewCell" customModule="picky" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="29" width="600" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Se-Ru-OMg" id="FN8-GT-blc">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwO-55-TS5">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="79.5"/>
+                                                    <fontDescription key="fontDescription" name="Magra" family="Magra" pointSize="34"/>
+                                                    <color key="textColor" red="0.90588235289999997" green="0.23137254900000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="gwO-55-TS5" secondAttribute="bottom" constant="-8" id="G0z-8m-NXn"/>
+                                                <constraint firstItem="gwO-55-TS5" firstAttribute="top" secondItem="FN8-GT-blc" secondAttribute="topMargin" constant="-8" id="MCb-bK-5hr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="gwO-55-TS5" secondAttribute="trailing" constant="-8" id="VPd-cJ-SpQ"/>
+                                                <constraint firstItem="gwO-55-TS5" firstAttribute="leading" secondItem="FN8-GT-blc" secondAttribute="leadingMargin" constant="-8" id="ubu-R0-O8H"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="budgetCellLabel" destination="gwO-55-TS5" id="qDm-rI-tTV"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="dyI-p1-PCS" id="3vb-0B-CLQ"/>
+                                    <outlet property="delegate" destination="dyI-p1-PCS" id="t0I-hv-mU2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.90588235289999997" green="0.23137254900000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="HEO-4R-Rv0" firstAttribute="leading" secondItem="IHQ-AE-GBO" secondAttribute="leadingMargin" constant="-20" id="8Mt-27-siB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HEO-4R-Rv0" secondAttribute="trailing" constant="-20" id="8pW-0E-IzU"/>
+                            <constraint firstItem="HEO-4R-Rv0" firstAttribute="top" secondItem="ett-Gm-8aE" secondAttribute="bottom" constant="1" id="AQe-Ry-EEu"/>
+                            <constraint firstItem="ett-Gm-8aE" firstAttribute="leading" secondItem="IHQ-AE-GBO" secondAttribute="leading" id="I1C-Kw-hbB"/>
+                            <constraint firstAttribute="trailing" secondItem="ett-Gm-8aE" secondAttribute="trailing" id="Jyi-Du-J7Q"/>
+                            <constraint firstItem="ett-Gm-8aE" firstAttribute="top" secondItem="tEX-KJ-vco" secondAttribute="bottom" id="KnN-RY-Y4O"/>
+                            <constraint firstItem="QLa-NN-DOm" firstAttribute="top" secondItem="HEO-4R-Rv0" secondAttribute="bottom" id="Stj-QQ-hIM"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1646" y="-275"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="akp-DF-vli">
@@ -126,7 +211,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qNC-Sp-Z2E">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.90588235289999997" green="0.23137254900000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Magra" family="Magra" pointSize="22"/>
                             <color key="textColor" red="0.90588235289999997" green="0.23137254900000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -143,6 +228,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pizza" width="2700" height="1809"/>
+        <image name="tacos" width="1078" height="809"/>
     </resources>
 </document>
