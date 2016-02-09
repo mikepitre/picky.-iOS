@@ -27,6 +27,8 @@ class FlavorTableVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         Flavor(name: "Dessert", image: "dessert")
     ]
     
+    var selectedFlavors: [String] = []
+    
     @IBOutlet weak var nextButton: UIBarButtonItem!
     
     override func viewDidLoad() {
@@ -63,5 +65,30 @@ class FlavorTableVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! FoodTableViewCell
+        
+        if selectedFlavors.contains(flavors[indexPath.row].name) {
+            let newArr = selectedFlavors.filter {$0 != "\(flavors[indexPath.row].name)"}
+            selectedFlavors = newArr
+            cell.foodCellLabel.backgroundColor = UIColor(white: 0.0, alpha: 0.35)
+        } else {
+            selectedFlavors.append(flavors[indexPath.row].name)
+            cell.foodCellLabel.backgroundColor = UIColor(white: 0.0, alpha: 0.0)
+        }
+        
+        print(selectedFlavors)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "goToBudget" {
+            let destinationVC = segue.destinationViewController as! BudgetTableVC
+            destinationVC.selectedFlavors = self.selectedFlavors
+        }
+    }
+    
+    
     
 }
