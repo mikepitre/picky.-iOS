@@ -10,7 +10,7 @@ import Foundation
 
 class Flavor {
     var name = ""
-    var image = ""
+    var image = ""    
     
     init(name: String, image: String) {
         self.name = name

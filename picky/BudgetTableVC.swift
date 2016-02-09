@@ -11,6 +11,8 @@ import UIKit
 class BudgetTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     let budgets = ["$", "$$", "$$$", "$$$$"]
+    
+    var selectedFlavors: [String] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,9 @@ class BudgetTableVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         // Do any additional setup after loading the view.
         
         self.navigationItem.title = "picky."
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+
+        print(selectedFlavors)
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,5 +42,12 @@ class BudgetTableVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         
         return cell
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "goToSetting" {
+            
+        }
+    }
+    
 
 }
