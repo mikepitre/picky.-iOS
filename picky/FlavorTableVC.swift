@@ -73,10 +73,10 @@ class FlavorTableVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         if selectedFlavors.contains(flavors[indexPath.row].name) {
             let newArr = selectedFlavors.filter {$0 != "\(flavors[indexPath.row].name)"}
             selectedFlavors = newArr
-            cell.foodCellLabel.backgroundColor = UIColor(white: 0.0, alpha: 0.35)
+            cell.foodCellLabel.textColor = UIColor.whiteColor()
         } else {
             selectedFlavors.append(flavors[indexPath.row].name)
-            cell.foodCellLabel.backgroundColor = UIColor(white: 0.0, alpha: 0.0)
+            cell.foodCellLabel.textColor = UIColor(red: 231/255.0, green: 59/255.0, blue: 64/255.0, alpha: 1)
         }
         
         print(selectedFlavors)

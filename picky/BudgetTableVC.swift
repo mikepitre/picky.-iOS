@@ -45,7 +45,12 @@ class BudgetTableVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "goToSetting" {
+            let destinationVC = segue.destinationViewController as! SettingTableVC
+            destinationVC.selectedFlavors = self.selectedFlavors
             
+            if let sender = sender as? BudgetTableViewCell {
+                destinationVC.budget = "\(sender.budgetCellLabel.text!.characters.count)"
+            }
         }
     }
     
