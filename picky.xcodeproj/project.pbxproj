@@ -70,22 +70,54 @@
 		5D2226C81C629C2C008032AA /* picky */ = {
 			isa = PBXGroup;
 			children = (
+				8FC290301C6C1AD100DF64A5 /* Model */,
+				8FC290311C6C1AD800DF64A5 /* View */,
+				8FC290321C6C1ADF00DF64A5 /* Controller */,
+				8FC290331C6C1B0700DF64A5 /* Utils */,
 				5D2226C91C629C2C008032AA /* AppDelegate.swift */,
-				5D2226E91C63EC53008032AA /* Flavor.swift */,
-				5D2226EB1C63ED29008032AA /* FlavorTableVC.swift */,
-				5D2226E71C62A643008032AA /* FoodTableViewCell.swift */,
 				5D2226CD1C629C2C008032AA /* Main.storyboard */,
 				5D2226D21C629C2C008032AA /* LaunchScreen.storyboard */,
 				5D2226D51C629C2C008032AA /* Info.plist */,
-				5D2226DF1C629EE3008032AA /* Magra-Bold.ttf */,
-				5D2226E01C629EE4008032AA /* Magra-Regular.ttf */,
 				5D2226ED1C63EF38008032AA /* Assets.xcassets */,
-				8F04A42D1C64581E00A69E3D /* BudgetTableVC.swift */,
-				8F04A42F1C6458AA00A69E3D /* BudgetTableViewCell.swift */,
-				5D8EB0321C6A9DB8001E9EAE /* SettingTableVC.swift */,
-				5D8EB0341C6BE274001E9EAE /* SettingCell.swift */,
 			);
 			path = picky;
+			sourceTree = "<group>";
+		};
+		8FC290301C6C1AD100DF64A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D2226E91C63EC53008032AA /* Flavor.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8FC290311C6C1AD800DF64A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D2226E71C62A643008032AA /* FoodTableViewCell.swift */,
+				8F04A42F1C6458AA00A69E3D /* BudgetTableViewCell.swift */,
+				5D8EB0341C6BE274001E9EAE /* SettingCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8FC290321C6C1ADF00DF64A5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5D2226EB1C63ED29008032AA /* FlavorTableVC.swift */,
+				8F04A42D1C64581E00A69E3D /* BudgetTableVC.swift */,
+				5D8EB0321C6A9DB8001E9EAE /* SettingTableVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8FC290331C6C1B0700DF64A5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5D2226DF1C629EE3008032AA /* Magra-Bold.ttf */,
+				5D2226E01C629EE4008032AA /* Magra-Regular.ttf */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -63,6 +63,12 @@ class FlavorTableVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         cell.cellImage.image = UIImage(named: "\(flavors[indexPath.row].image)")
         cell.foodCellLabel.text = flavors[indexPath.row].name
         
+        if selectedFlavors.contains(flavors[indexPath.row].name) {
+            cell.foodCellLabel.textColor = UIColor(red: 231/255.0, green: 59/255.0, blue: 64/255.0, alpha: 1)
+        } else {
+            cell.foodCellLabel.textColor = UIColor.whiteColor()
+        }
+        
         return cell
     }
     
@@ -81,6 +87,7 @@ class FlavorTableVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         
         print(selectedFlavors)
     }
+    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "goToBudget" {
