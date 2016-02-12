@@ -21,10 +21,13 @@ class FlavorTableVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         Flavor(name: "BBQ", image: "bbq"),
         Flavor(name: "Sandwiches", image: "sandwich"),
         Flavor(name: "Burgers", image: "burgers"),
+        Flavor(name: "Pasta", image: "pasta"),
         Flavor(name: "Asian", image: "asian"),
         Flavor(name: "Salad", image: "salad"),
         Flavor(name: "Seafood", image: "seafood"),
-        Flavor(name: "Dessert", image: "dessert")
+        Flavor(name: "Dessert", image: "dessert"),
+        Flavor(name: "Breakfast", image: "pancakes"),
+        Flavor(name: "Brunch", image: "brunch")
     ]
     
     var selectedFlavors: [String] = []

@@ -13,6 +13,9 @@ class BudgetTableVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     let budgets = ["$", "$$", "$$$", "$$$$"]
     
     var selectedFlavors: [String] = []
+    
+    @IBOutlet weak var skipButton: UIBarButtonItem!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +24,9 @@ class BudgetTableVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         
         self.navigationItem.title = "picky."
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        
+        let skipFont = UIFont(name: "Magra", size: 17.0)
+        skipButton.setTitleTextAttributes([NSFontAttributeName: skipFont!], forState: UIControlState.Normal)
 
         print(selectedFlavors)
     }
@@ -52,6 +58,10 @@ class BudgetTableVC: UIViewController, UITableViewDataSource, UITableViewDelegat
                 destinationVC.budget = "\(sender.budgetCellLabel.text!.characters.count)"
             }
         }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
 

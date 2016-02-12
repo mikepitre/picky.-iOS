@@ -12,6 +12,7 @@
             <string>Magra</string>
             <string>Magra</string>
             <string>Magra</string>
+            <string>Magra</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -126,7 +127,7 @@
             </objects>
             <point key="canvasLocation" x="940" y="-275"/>
         </scene>
-        <!--Budget TableVC-->
+        <!--Title-->
         <scene sceneID="vFy-Ii-WaJ">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="dyI-p1-PCS" customClass="BudgetTableVC" customModule="picky" customModuleProvider="target" sceneMemberID="viewController">
@@ -152,7 +153,7 @@
                                 <rect key="frame" x="0.0" y="114" width="600" height="442"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="budgetCell" rowHeight="80" id="3Se-Ru-OMg" customClass="BudgetTableViewCell" customModule="picky" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="budgetCell" rowHeight="80" id="3Se-Ru-OMg" customClass="BudgetTableViewCell" customModule="picky" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="29" width="600" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Se-Ru-OMg" id="FN8-GT-blc">
@@ -199,13 +200,23 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Title" id="A10-rw-g7E">
+                        <barButtonItem key="rightBarButtonItem" title="Skip" id="g5c-0H-4FD">
+                            <connections>
+                                <segue destination="Qkc-qQ-IR5" kind="show" identifier="goToSetting" id="UTj-v2-f10"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="skipButton" destination="g5c-0H-4FD" id="icK-68-Fdb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLE-rd-QzK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1646" y="-275"/>
         </scene>
-        <!--Setting TableVC-->
+        <!--Title-->
         <scene sceneID="EJJ-3a-oeZ">
             <objects>
                 <viewController id="Qkc-qQ-IR5" customClass="SettingTableVC" customModule="picky" customModuleProvider="target" sceneMemberID="viewController">
@@ -231,13 +242,40 @@
                                 <rect key="frame" x="0.0" y="113" width="600" height="487"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingCell" rowHeight="109" id="6wd-1q-Qnc" customClass="SettingCell" customModule="picky" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="600" height="109"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="settingCell" rowHeight="120" id="6wd-1q-Qnc" customClass="SettingCell" customModule="picky" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6wd-1q-Qnc" id="YVc-5Z-cPk">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="108.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="119.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s0B-7h-wCY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9mR-Z1-SLs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="119.5"/>
+                                                    <fontDescription key="fontDescription" name="Magra" family="Magra" pointSize="36"/>
+                                                    <color key="textColor" red="0.97268270570000004" green="1" blue="0.97697381770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <size key="shadowOffset" width="0.0" height="1"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="9mR-Z1-SLs" secondAttribute="bottom" constant="-8" id="1NB-ne-Gtz"/>
+                                                <constraint firstItem="s0B-7h-wCY" firstAttribute="top" secondItem="YVc-5Z-cPk" secondAttribute="topMargin" constant="-8" id="1g1-4E-2ls"/>
+                                                <constraint firstItem="s0B-7h-wCY" firstAttribute="leading" secondItem="YVc-5Z-cPk" secondAttribute="leadingMargin" constant="-8" id="D28-rT-CBr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="9mR-Z1-SLs" secondAttribute="trailing" constant="-8" id="PU2-WD-g0I"/>
+                                                <constraint firstItem="9mR-Z1-SLs" firstAttribute="top" secondItem="YVc-5Z-cPk" secondAttribute="topMargin" constant="-8" id="dWg-9B-RIc"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="s0B-7h-wCY" secondAttribute="trailing" constant="-8" id="jl9-fn-WAx"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="s0B-7h-wCY" secondAttribute="bottom" constant="-8" id="lsU-GW-01u"/>
+                                                <constraint firstItem="9mR-Z1-SLs" firstAttribute="leading" secondItem="YVc-5Z-cPk" secondAttribute="leadingMargin" constant="-8" id="pZv-VX-Wxx"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="settingCellImage" destination="s0B-7h-wCY" id="zY0-v1-HWU"/>
+                                            <outlet property="settingCellLabel" destination="9mR-Z1-SLs" id="vdZ-cc-m9I"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -257,6 +295,12 @@
                             <constraint firstItem="DGf-cM-y9c" firstAttribute="bottom" secondItem="Vl7-eZ-u7Q" secondAttribute="bottomMargin" id="n0j-xt-Hz2"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="7fp-bd-HP4">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="eDS-jU-dfG"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nextButton" destination="eDS-jU-dfG" id="Erg-d4-uGU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hvA-wg-j6C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -289,4 +333,7 @@
     <resources>
         <image name="tacos" width="1078" height="809"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="UTj-v2-f10"/>
+    </inferredMetricsTieBreakers>
 </document>
