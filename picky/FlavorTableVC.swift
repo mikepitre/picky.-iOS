@@ -93,8 +93,8 @@ class FlavorTableVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "goToBudget" {
-            let destinationVC = segue.destinationViewController as! BudgetTableVC
+        if segue.identifier == "goToSetting" {
+            let destinationVC = segue.destinationViewController as! SettingTableVC
             destinationVC.selectedFlavors = self.selectedFlavors
         }
     }

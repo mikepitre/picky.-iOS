@@ -105,8 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				5D2226EB1C63ED29008032AA /* FlavorTableVC.swift */,
-				8F04A42D1C64581E00A69E3D /* BudgetTableVC.swift */,
 				5D8EB0321C6A9DB8001E9EAE /* SettingTableVC.swift */,
+				8F04A42D1C64581E00A69E3D /* BudgetTableVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";

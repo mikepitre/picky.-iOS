@@ -11,7 +11,6 @@ import UIKit
 class SettingTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var selectedFlavors: [String] = []
-    var budget = ""
     var selectedSettings: [String] = []
     var settings: [Flavor] = [
         Flavor(name: "Beer", image: "beer"),
@@ -35,8 +34,9 @@ class SettingTableVC: UIViewController, UITableViewDataSource, UITableViewDelega
         let nextFont = UIFont(name: "Magra", size: 17.0)
         nextButton.setTitleTextAttributes([NSFontAttributeName: nextFont!], forState: UIControlState.Normal)
         
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
+        
         print(selectedFlavors)
-        print(budget)
         
     }
 
@@ -79,6 +79,14 @@ class SettingTableVC: UIViewController, UITableViewDataSource, UITableViewDelega
         }
         
         print(selectedSettings)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "goToBudget" {
+            let destinationVC = segue.destinationViewController as! BudgetTableVC
+            destinationVC.selectedFlavors = self.selectedFlavors
+            destinationVC.selectedSettings = self.selectedSettings
+        }
     }
 
 }
