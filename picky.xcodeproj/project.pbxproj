@@ -18,6 +18,8 @@
 		5D2226EE1C63EF38008032AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D2226ED1C63EF38008032AA /* Assets.xcassets */; };
 		5D8EB0331C6A9DB8001E9EAE /* SettingTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8EB0321C6A9DB8001E9EAE /* SettingTableVC.swift */; };
 		5D8EB0351C6BE274001E9EAE /* SettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8EB0341C6BE274001E9EAE /* SettingCell.swift */; };
+		5D8EB0371C73C529001E9EAE /* DistanceTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8EB0361C73C529001E9EAE /* DistanceTableVC.swift */; };
+		5D8EB0391C73C600001E9EAE /* DistanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D8EB0381C73C600001E9EAE /* DistanceCell.swift */; };
 		8F04A42E1C64581E00A69E3D /* BudgetTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F04A42D1C64581E00A69E3D /* BudgetTableVC.swift */; };
 		8F04A4301C6458AA00A69E3D /* BudgetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F04A42F1C6458AA00A69E3D /* BudgetTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +38,8 @@
 		5D2226ED1C63EF38008032AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D8EB0321C6A9DB8001E9EAE /* SettingTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableVC.swift; sourceTree = "<group>"; };
 		5D8EB0341C6BE274001E9EAE /* SettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingCell.swift; sourceTree = "<group>"; };
+		5D8EB0361C73C529001E9EAE /* DistanceTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceTableVC.swift; sourceTree = "<group>"; };
+		5D8EB0381C73C600001E9EAE /* DistanceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceCell.swift; sourceTree = "<group>"; };
 		8F04A42D1C64581E00A69E3D /* BudgetTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetTableVC.swift; sourceTree = "<group>"; };
 		8F04A42F1C6458AA00A69E3D /* BudgetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +101,7 @@
 				5D2226E71C62A643008032AA /* FoodTableViewCell.swift */,
 				8F04A42F1C6458AA00A69E3D /* BudgetTableViewCell.swift */,
 				5D8EB0341C6BE274001E9EAE /* SettingCell.swift */,
+				5D8EB0381C73C600001E9EAE /* DistanceCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 				5D2226EB1C63ED29008032AA /* FlavorTableVC.swift */,
 				5D8EB0321C6A9DB8001E9EAE /* SettingTableVC.swift */,
 				8F04A42D1C64581E00A69E3D /* BudgetTableVC.swift */,
+				5D8EB0361C73C529001E9EAE /* DistanceTableVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -194,7 +200,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D8EB0391C73C600001E9EAE /* DistanceCell.swift in Sources */,
 				5D2226EA1C63EC53008032AA /* Flavor.swift in Sources */,
+				5D8EB0371C73C529001E9EAE /* DistanceTableVC.swift in Sources */,
 				5D2226EC1C63ED29008032AA /* FlavorTableVC.swift in Sources */,
 				5D8EB0351C6BE274001E9EAE /* SettingCell.swift in Sources */,
 				8F04A4301C6458AA00A69E3D /* BudgetTableViewCell.swift in Sources */,
