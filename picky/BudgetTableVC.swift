@@ -60,6 +60,13 @@ class BudgetTableVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             destinationVC.selectedSettings = self.selectedSettings
             destinationVC.selectedBudget = self.selectedBudget
         }
+        
+        if segue.identifier == "skipToDistance" {
+            let destinationVC = segue.destinationViewController as! DistanceTableVC
+            
+            destinationVC.selectedFlavors = self.selectedFlavors
+            destinationVC.selectedSettings = self.selectedSettings
+        }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
