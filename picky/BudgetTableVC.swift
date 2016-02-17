@@ -14,6 +14,7 @@ class BudgetTableVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     var selectedFlavors: [String] = []
     var selectedSettings: [String] = []
+    var selectedBudget = ""
     
     @IBOutlet weak var skipButton: UIBarButtonItem!
     
@@ -30,6 +31,7 @@ class BudgetTableVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         skipButton.setTitleTextAttributes([NSFontAttributeName: skipFont!], forState: UIControlState.Normal)
 
         print(selectedFlavors)
+        print(selectedSettings)
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,19 +52,20 @@ class BudgetTableVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         return cell
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == "goToSetting" {
-//            let destinationVC = segue.destinationViewController as! SettingTableVC
-//            destinationVC.selectedFlavors = self.selectedFlavors
-//            
-//            if let sender = sender as? BudgetTableViewCell {
-//                destinationVC.budget = "\(sender.budgetCellLabel.text!.characters.count)"
-//            }
-//        }
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "goToDistance" {
+            let destinationVC = segue.destinationViewController as! DistanceTableVC
+            
+            destinationVC.selectedFlavors = self.selectedFlavors
+            destinationVC.selectedSettings = self.selectedSettings
+            destinationVC.selectedBudget = self.selectedBudget
+        }
+    }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        selectedBudget = "\(budgets[indexPath.row].characters.count)"
+        performSegueWithIdentifier("goToDistance", sender: DistanceCell())
         print(budgets[indexPath.row].characters.count)
     }
     

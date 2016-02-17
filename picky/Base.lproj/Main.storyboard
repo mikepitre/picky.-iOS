@@ -178,7 +178,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="budgetCellLabel" destination="gwO-55-TS5" id="qDm-rI-tTV"/>
-                                            <segue destination="JhH-Dw-vgN" kind="show" identifier="goToDistance" id="LcE-Bb-xb1"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -212,6 +211,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="skipButton" destination="g5c-0H-4FD" id="icK-68-Fdb"/>
+                        <segue destination="JhH-Dw-vgN" kind="show" identifier="goToDistance" id="tZF-OL-HPa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLE-rd-QzK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -420,6 +420,6 @@
         <image name="tacos" width="1078" height="809"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Y3x-WW-IlO"/>
+        <segue reference="tZF-OL-HPa"/>
     </inferredMetricsTieBreakers>
 </document>

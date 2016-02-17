@@ -10,11 +10,17 @@ import UIKit
 
 class DistanceTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var selectedFlavors: [String] = []
+    var selectedSettings: [String] = []
+    var selectedBudget = ""
+    
+    var selectedDistance = "\(9.99/0.00062137)"
     let distances = ["Less than 1 Mile", "Less than 5 Miles", "Less than 10 Miles"]
+    
     
     @IBOutlet weak var skipButton: UIBarButtonItem!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +31,10 @@ class DistanceTableVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         let skipFont = UIFont(name: "Magra", size: 17.0)
         skipButton.setTitleTextAttributes([NSFontAttributeName: skipFont!], forState: UIControlState.Normal)
+        
+        print(selectedFlavors)
+        print(selectedSettings)
+        print(selectedBudget)
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,15 +54,19 @@ class DistanceTableVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         return cell
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! DistanceCell
+        
+        if cell.distanceCellLabel.text == distances[0] {
+            selectedDistance = "\(0.99/0.00062137)"
+        } else if cell.distanceCellLabel.text == distances[1] {
+            selectedDistance = "\(4.99/0.00062137)"
+        } else {
+            selectedDistance = "\(9.99/0.00062137)"
+        }
+        
+        print(selectedDistance)
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
     }
-    */
 
 }
