@@ -336,7 +336,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xv0-ct-vrj">
-                                                    <rect key="frame" x="51" y="11" width="541" height="42"/>
+                                                    <rect key="frame" x="51" y="14" width="541" height="42"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123 ABC Street" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jad-Gq-tjs">
                                                             <rect key="frame" x="0.0" y="0.0" width="541" height="21"/>
@@ -353,7 +353,7 @@
                                                     </subviews>
                                                 </stackView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O92-hk-CY8">
-                                                    <rect key="frame" x="8" y="12" width="35" height="35"/>
+                                                    <rect key="frame" x="8" y="17.5" width="35" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="2Ij-4Z-fGv"/>
                                                         <constraint firstAttribute="width" constant="35" id="iGY-wP-DD5"/>
@@ -372,7 +372,9 @@
                                                 <constraint firstItem="O92-hk-CY8" firstAttribute="top" secondItem="Fy2-qE-cOT" secondAttribute="topMargin" constant="4" id="2KC-oV-tCQ"/>
                                                 <constraint firstItem="Xv0-ct-vrj" firstAttribute="top" secondItem="Fy2-qE-cOT" secondAttribute="topMargin" constant="3" id="7T6-IH-Y94"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Xv0-ct-vrj" secondAttribute="trailing" id="8eA-nK-rtv"/>
+                                                <constraint firstItem="O92-hk-CY8" firstAttribute="centerY" secondItem="Fy2-qE-cOT" secondAttribute="centerY" id="9al-tj-fzR"/>
                                                 <constraint firstItem="Xv0-ct-vrj" firstAttribute="centerY" secondItem="Fy2-qE-cOT" secondAttribute="centerY" id="PXg-Iu-jRb"/>
+                                                <constraint firstItem="Xv0-ct-vrj" firstAttribute="centerY" secondItem="O92-hk-CY8" secondAttribute="centerY" id="RZP-h7-kHp"/>
                                                 <constraint firstItem="Xv0-ct-vrj" firstAttribute="centerY" secondItem="Fy2-qE-cOT" secondAttribute="centerY" id="S6a-6z-t9Q"/>
                                                 <constraint firstItem="O92-hk-CY8" firstAttribute="leading" secondItem="Fy2-qE-cOT" secondAttribute="leadingMargin" id="fzQ-wY-IT7"/>
                                                 <constraint firstItem="Xv0-ct-vrj" firstAttribute="leading" secondItem="O92-hk-CY8" secondAttribute="trailing" constant="8" id="um6-cb-qw6"/>
@@ -380,6 +382,10 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
+                                                    <exclude reference="2KC-oV-tCQ"/>
+                                                    <exclude reference="ztW-kT-R8L"/>
+                                                    <exclude reference="1Aw-rg-Dfl"/>
+                                                    <exclude reference="7T6-IH-Y94"/>
                                                     <exclude reference="PXg-Iu-jRb"/>
                                                     <exclude reference="S6a-6z-t9Q"/>
                                                 </mask>
