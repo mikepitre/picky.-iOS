@@ -11,6 +11,8 @@ import Alamofire
 
 class PickTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    let pickCellIcons = ["star", "clock", "phone", "website", "wallet"]
+    
     @IBOutlet weak var pickImage: UITableView!
     
     override func viewDidLoad() {
@@ -34,13 +36,14 @@ class PickTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         default:
             let cell = tableView.dequeueReusableCellWithIdentifier("pickCell", forIndexPath: indexPath) as! PickCell
             cell.pickCellLabel.text = "Open Until 10:00PM"
+            cell.pickCellIcon.setImage(UIImage(named: "\(pickCellIcons[indexPath.row - 1])"), forState: .Normal)
             return cell
         }
     
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 6
     }
 
 }

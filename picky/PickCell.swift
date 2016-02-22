@@ -11,7 +11,7 @@ import UIKit
 class PickCell: UITableViewCell {
     
     @IBOutlet weak var pickCellLabel: UILabel!
-    
+    @IBOutlet weak var pickCellIcon: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
